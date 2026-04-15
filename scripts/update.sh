@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-echo "Updating Text Generation UI"
+echo "Updating TextGen"
 source /workspace/venv/bin/activate
-cd /workspace/text-generation-webui
+cd /workspace/textgen
 git checkout main
 git pull
 pip3 install -r requirements.txt

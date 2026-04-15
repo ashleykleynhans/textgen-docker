@@ -7,12 +7,12 @@ source /venv/bin/activate
 pip3 install --upgrade pip
 pip3 install torch==${TORCH_VERSION} --index-url ${INDEX_URL}
 
-# Clone the git repo of Text Generation Web UI and set version
-git clone https://github.com/oobabooga/text-generation-webui
-cd /text-generation-webui
-git checkout ${OOBABOOGA_VERSION}
+# Clone the git repo of TextGen and set version
+git clone https://github.com/oobabooga/textgen
+cd /textgen
+git checkout ${TEXTGEN_VERSION}
 
-# Install the dependencies for Text Generation Web UI
+# Install the dependencies for TextGen
 # Including all extensions
 pip3 install --upgrade setuptools
 pip3 install -r requirements/full/requirements.txt

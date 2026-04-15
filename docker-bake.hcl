@@ -7,11 +7,11 @@ variable "REGISTRY_USER" {
 }
 
 variable "APP" {
-    default = "oobabooga"
+    default = "textgen"
 }
 
 variable "RELEASE" {
-    default = "v4.4"
+    default = "v4.5"
 }
 
 variable "RELEASE_SUFFIX" {
@@ -50,7 +50,7 @@ target "default" {
         BASE_IMAGE = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python${PYTHON_VERSION}-cuda${CUDA_VERSION}-torch${TORCH_VERSION}"
         INDEX_URL = "https://download.pytorch.org/whl/cu${CU_VERSION}"
         TORCH_VERSION = "${TORCH_VERSION}+cu${CU_VERSION}"
-        OOBABOOGA_VERSION = "${RELEASE}"
-        VENV_PATH = "/workspace/venvs/text-generation-webui"
+        TEXTGEN_VERSION = "${RELEASE}"
+        VENV_PATH = "/workspace/venvs/textgen"
     }
 }

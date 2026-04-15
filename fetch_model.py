@@ -11,7 +11,7 @@ parser.add_argument('model', type=str)
 parser.add_argument('output_folder', type=str)
 args = parser.parse_args()
 
-SCRIPT_DIR = "/workspace/text-generation-webui"
+SCRIPT_DIR = "/workspace/textgen"
 
 model = args.model.strip()
 output_folder = args.output_folder
@@ -43,7 +43,7 @@ while not success and retry_count < 10:
         break
     if run.returncode == 0:
         # Successful download. Write the model file or folder name to /tmp for use in --model arg
-        with open('/workspace/text-gen-model', 'w') as f:
+        with open('/workspace/textgen-model', 'w') as f:
             f.write(write + '\n')
         success = True
 

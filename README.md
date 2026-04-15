@@ -1,9 +1,9 @@
 <div align="center">
 
-# Docker image for the Text Generation Web UI: A Gradio web UI for Large Language Models with support for multiple inference backends.
+# Docker image for TextGen: The original local LLM interface. Text, vision, tool-calling, training. UI + API, 100% offline and private.
 
-![Docker Pulls](https://img.shields.io/docker/pulls/ashleykza/oobabooga?style=for-the-badge&logo=docker&label=Docker%20Pulls&link=https%3A%2F%2Fhub.docker.com%2Frepository%2Fdocker%2Fashleykza%2Foobabooga%2Fgeneral)
-![Template Version](https://img.shields.io/github/v/tag/ashleykleynhans/text-generation-docker?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjUuMywgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMDAwIDIwMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwMDAgMjAwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM2NzNBQjc7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDE3Ljk1LDcxMS4wNGMtNC4yMiwyLjM2LTkuMTgsMy4wMS0xMy44NiwxLjgyTDM4Ni4xNyw1NTUuM2MtNDEuNzItMTAuNzYtODYuMDItMC42My0xMTYuNiwyOS43MwoJCQlsLTEuNCwxLjM5Yy0zNS45MiwzNS42NS0yNy41NSw5NS44LDE2Ljc0LDEyMC4zbDU4NC4zMiwzMjQuMjNjMzEuMzYsMTcuNCw1MC44Miw1MC40NSw1MC44Miw4Ni4zMnY4MDYuNzYKCQkJYzAsMzUuNDktMzguNDEsNTcuNjctNjkuMTUsMzkuOTRsLTcwMy4xNS00MDUuNjRjLTIzLjYtMTMuNjEtMzguMTMtMzguNzgtMzguMTMtNjYuMDJWNjY2LjYzYzAtODcuMjQsNDYuNDUtMTY3Ljg5LDEyMS45Mi0yMTEuNjYKCQkJTDkzMy44NSw0Mi4xNWMyMy40OC0xMy44LDUxLjQ3LTE3LjcsNzcuODMtMTAuODRsNzQ1LjcxLDE5NC4xYzMxLjUzLDguMjEsMzYuOTksNTAuNjUsOC41Niw2Ni41N0wxMDE3Ljk1LDcxMS4wNHoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUyNy43NSw1MzYuMzhsMTI4Ljg5LTc5LjYzbDE4OS45MiwxMDkuMTdjMjcuMjQsMTUuNjYsNDMuOTcsNDQuNzMsNDMuODIsNzYuMTVsLTQsODU3LjYKCQkJYy0wLjExLDI0LjM5LTEzLjE1LDQ2Ljg5LTM0LjI1LDU5LjExbC03MDEuNzUsNDA2LjYxYy0zMi4zLDE4LjcxLTcyLjc0LTQuNTktNzIuNzQtNDEuOTJ2LTc5Ny40MwoJCQljMC0zOC45OCwyMS4wNi03NC45MSw1NS4wNy05My45Nmw1OTAuMTctMzMwLjUzYzE4LjIzLTEwLjIxLDE4LjY1LTM2LjMsMC43NS00Ny4wOUwxNTI3Ljc1LDUzNi4zOHoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUyNC4wMSw2NjUuOTEiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K&logoColor=%23ffffff&label=Template%20Version&color=%23673ab7)
+![Docker Pulls](https://img.shields.io/docker/pulls/ashleykza/textgen?style=for-the-badge&logo=docker&label=Docker%20Pulls&link=https%3A%2F%2Fhub.docker.com%2Frepository%2Fdocker%2Fashleykza%2Ftextgen%2Fgeneral)
+![Template Version](https://img.shields.io/github/v/tag/ashleykleynhans/textgen-docker?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjUuMywgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMDAwIDIwMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwMDAgMjAwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM2NzNBQjc7fQo8L3N0eWxlPgo8Zz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDE3Ljk1LDcxMS4wNGMtNC4yMiwyLjM2LTkuMTgsMy4wMS0xMy44NiwxLjgyTDM4Ni4xNyw1NTUuM2MtNDEuNzItMTAuNzYtODYuMDItMC42My0xMTYuNiwyOS43MwoJCQlsLTEuNCwxLjM5Yy0zNS45MiwzNS42NS0yNy41NSw5NS44LDE2Ljc0LDEyMC4zbDU4NC4zMiwzMjQuMjNjMzEuMzYsMTcuNCw1MC44Miw1MC40NSw1MC44Miw4Ni4zMnY4MDYuNzYKCQkJYzAsMzUuNDktMzguNDEsNTcuNjctNjkuMTUsMzkuOTRsLTcwMy4xNS00MDUuNjRjLTIzLjYtMTMuNjEtMzguMTMtMzguNzgtMzguMTMtNjYuMDJWNjY2LjYzYzAtODcuMjQsNDYuNDUtMTY3Ljg5LDEyMS45Mi0yMTEuNjYKCQkJTDkzMy44NSw0Mi4xNWMyMy40OC0xMy44LDUxLjQ3LTE3LjcsNzcuODMtMTAuODRsNzQ1LjcxLDE5NC4xYzMxLjUzLDguMjEsMzYuOTksNTAuNjUsOC41Niw2Ni41N0wxMDE3Ljk1LDcxMS4wNHoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUyNy43NSw1MzYuMzhsMTI4Ljg5LTc5LjYzbDE4OS45MiwxMDkuMTdjMjcuMjQsMTUuNjYsNDMuOTcsNDQuNzMsNDMuODIsNzYuMTVsLTQsODU3LjYKCQkJYy0wLjExLDI0LjM5LTEzLjE1LDQ2Ljg5LTM0LjI1LDU5LjExbC03MDEuNzUsNDA2LjYxYy0zMi4zLDE4LjcxLTcyLjc0LTQuNTktNzIuNzQtNDEuOTJ2LTc5Ny40MwoJCQljMC0zOC45OCwyMS4wNi03NC45MSw1NS4wNy05My45Nmw1OTAuMTctMzMwLjUzYzE4LjIzLTEwLjIxLDE4LjY1LTM2LjMsMC43NS00Ny4wOUwxNTI3Ljc1LDUzNi4zOHoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUyNC4wMSw2NjUuOTEiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K&logoColor=%23ffffff&label=Template%20Version&color=%23673ab7)
 
 </div>
 
@@ -13,8 +13,8 @@
 * CUDA 12.8.1
 * Python 3.13
 * Torch 2.9.1
-* [Text Generation Web UI](
-  https://github.com/oobabooga/text-generation-webui) v4.4
+* [TextGen](
+  https://github.com/oobabooga/textgen) v4.5
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
 * [runpodctl](https://github.com/runpod/runpodctl)
@@ -42,13 +42,13 @@ to launch it on RunPod.
 
 ```bash
 # Clone the repo
-git clone https://github.com/ashleykleynhans/text-generation-docker.git
+git clone https://github.com/ashleykleynhans/textgen-docker.git
 
 # Log in to Docker Hub
 docker login
 
 # Build the image, tag the image, and push the image to Docker Hub
-cd text-generation-docker
+cd textgen-docker
 docker buildx bake -f docker-bake.hcl --push
 
 # Same as above but customize registry/user/release:
@@ -74,8 +74,8 @@ docker run -d \
   -p 7777:7777 \
   -p 8888:8888 \
   -p 2999:2999 \
-  -e VENV_PATH="/workspace/venvs/text-generation-webui" \
-  ashleykza/oobabooga:latest
+  -e VENV_PATH="/workspace/venvs/textgen" \
+  ashleykza/textgen:latest
 ```
 
 You can obviously substitute the image name and tag with your own.
@@ -84,7 +84,7 @@ You can obviously substitute the image name and tag with your own.
 
 | Connect Port | Internal Port | Description                      |
 |--------------|---------------|----------------------------------|
-| 3000         | 3001          | Text Generation Web UI           |
+| 3000         | 3001          | TextGen                          |
 | 5000         | 5001          | Open AI/Anthropic Compatible API |
 | 7777         | 7777          | Code Server                      |
 | 8888         | 8888          | Jupyter Lab                      |
@@ -92,22 +92,22 @@ You can obviously substitute the image name and tag with your own.
 
 ## Environment Variables
 
-| Variable             | Description                                                   | Default                                |
-|----------------------|---------------------------------------------------------------|----------------------------------------|
-| VENV_PATH            | Set the path for the Python venv for the app                  | /workspace/venvs/text-generation-webui |
-| JUPYTER_LAB_PASSWORD | Set a password for Jupyter lab                                | not set - no password                  |
-| DISABLE_AUTOLAUNCH   | Disable Web UI from launching automatically                   | (not set)                              |
-| DISABLE_SYNC         | Disable syncing if using a RunPod network volume              | (not set)                              |
-| HF_TOKEN             | Hugging Face Hub token for models that require authentication | (not set)                              |
+| Variable             | Description                                                   | Default                  |
+|----------------------|---------------------------------------------------------------|--------------------------|
+| VENV_PATH            | Set the path for the Python venv for the app                  | /workspace/venvs/textgen |
+| JUPYTER_LAB_PASSWORD | Set a password for Jupyter lab                                | not set - no password    |
+| DISABLE_AUTOLAUNCH   | Disable Web UI from launching automatically                   | (not set)                |
+| DISABLE_SYNC         | Disable syncing if using a RunPod network volume              | (not set)                |
+| HF_TOKEN             | Hugging Face Hub token for models that require authentication | (not set)                |
 
 ## Logs
 
-Text Generation Web UI creates a log file, and you can tail the log instead of
+TextGen creates a log file, and you can tail the log instead of
 killing the service to view the logs.
 
-| Application            | Log file                    |
-|------------------------|-----------------------------|
-| Text Generation Web UI | /workspace/logs/textgen.log |
+| Application | Log file                    |
+|-------------|-----------------------------|
+| TextGen     | /workspace/logs/textgen.log |
 
 For example:
 
@@ -117,7 +117,7 @@ tail -f /workspace/logs/textgen.log
 
 ## Community and Contributing
 
-Pull requests and issues on [GitHub](https://github.com/ashleykleynhans/text-generation-docker)
+Pull requests and issues on [GitHub](https://github.com/ashleykleynhans/textgen-docker)
 are welcome. Bug fixes and new features are encouraged.
 
 ## Appreciate my work?

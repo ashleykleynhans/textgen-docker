@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export PYTHONUNBUFFERED=1
-export APP="text-generation-webui"
+export APP="textgen"
 
 TEMPLATE_NAME="${APP}"
 TEMPLATE_VERSION_FILE="/workspace/${APP}/template.json"
@@ -144,11 +144,11 @@ fi
 
 if [[ ${MODEL} ]];
 then
-    if [[ ! -e "/workspace/text-gen-model" ]];
+    if [[ ! -e "/workspace/textgen-model" ]];
     then
         echo "MODEL: Downloading model (${MODEL}), this could take some time, please wait..."
         source /workspace/venv/bin/activate
-        /workspace/text-generation-webui/fetch_model.py "${MODEL}" /workspace/text-generation-webui/models >> /workspace/logs/download-model.log 2>&1
+        /workspace/textgen/fetch_model.py "${MODEL}" /workspace/textgen/models >> /workspace/logs/download-model.log 2>&1
         deactivate
     fi
 fi
@@ -158,7 +158,7 @@ then
     echo "Auto launching is disabled so the application will not be started automatically"
     echo "You can launch it manually:"
     echo ""
-    echo "   cd /workspace/text-generation-webui"
+    echo "   cd /workspace/textgen"
     echo "   ./start_textgen_server.sh"
 else
     ARGS=()
@@ -173,9 +173,9 @@ else
         export HF_TOKEN="${HF_TOKEN}"
     fi
 
-    echo "WEBUI: Starting Oobabooga Text Generation Web UI"
-    cd /workspace/text-generation-webui
+    echo "WEBUI: Starting TextGen"
+    cd /workspace/textgen
     nohup ./start_textgen_server.sh "${ARGS[@]}" > /workspace/logs/textgen.log 2>&1 &
-    echo "WEBUI: Oobabooga Text Generation Web UI started"
+    echo "WEBUI: TextGen started"
     echo "WEBUI: Log file: /workspace/logs/textgen.log"
 fi

@@ -2,14 +2,14 @@
 
 ARGS=("$@" --listen --api --listen-port 3000 --api-port 5000 --trust-remote-code)
 
-if [[ -f /workspace/text-gen-model ]];
+if [[ -f /workspace/textgen-model ]];
 then
-  ARGS=("${ARGS[@]}" --model "$(</workspace/text-gen-model)")
+  ARGS=("${ARGS[@]}" --model "$(</workspace/textgen-model)")
 fi
 
-VENV_PATH=$(cat /workspace/text-generation-webui/venv_path)
+VENV_PATH=$(cat /workspace/textgen/venv_path)
 source ${VENV_PATH}/bin/activate
-cd /workspace/text-generation-webui
+cd /workspace/textgen
 export PYTHONUNBUFFERED=1
 export HF_HOME="/workspace"
 
@@ -18,5 +18,5 @@ then
     export HF_TOKEN="${HF_TOKEN}"
 fi
 
-echo "Starting Oobabooba Text Generation UI: ${ARGS[@]}"
+echo "Starting TextGen: ${ARGS[@]}"
 python3 server.py "${ARGS[@]}"
