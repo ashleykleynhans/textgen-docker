@@ -14,7 +14,7 @@
 * Python 3.13
 * Torch 2.9.1
 * [TextGen](
-  https://github.com/oobabooga/textgen) v4.6
+  https://github.com/oobabooga/textgen) v4.6.2
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
 * [runpodctl](https://github.com/runpod/runpodctl)
