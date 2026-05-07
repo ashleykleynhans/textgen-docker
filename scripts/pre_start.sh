@@ -173,6 +173,8 @@ else
         export HF_TOKEN="${HF_TOKEN}"
     fi
 
+    cp /textgen/start_textgen_server.sh /workspace/textgen/start_textgen_server.sh
+
     echo "WEBUI: Starting TextGen"
     cd /workspace/textgen
     nohup ./start_textgen_server.sh "${ARGS[@]}" > /workspace/logs/textgen.log 2>&1 &
