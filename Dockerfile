@@ -22,6 +22,9 @@ RUN /install.sh && rm /install.sh
 # Remove existing SSH host keys
 RUN rm -f /etc/ssh/ssh_host_*
 
+# NGINX Proxy
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+
 # Copy startup script for TextGen
 COPY --chmod=755 scripts/start_textgen_server.sh /textgen/
 
