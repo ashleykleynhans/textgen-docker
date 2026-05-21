@@ -13,6 +13,12 @@ cd /workspace/textgen
 export PYTHONUNBUFFERED=1
 export HF_HOME="/workspace"
 
+# nvidia-* packages installed at system level (not in venv) won't be on
+# torch's .so search path - add them all so libcusparseLt and friends resolve
+for nvidia_lib in /usr/local/lib/python*/dist-packages/nvidia/*/lib; do
+    [[ -d "${nvidia_lib}" ]] && export LD_LIBRARY_PATH="${nvidia_lib}:${LD_LIBRARY_PATH:-}"
+done
+
 if [[ ${HF_TOKEN} ]];
 then
     export HF_TOKEN="${HF_TOKEN}"
